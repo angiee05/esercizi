@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form registrazione</title>
+</head>
+<body>
+    <form action="">
+        <section>
+            <h2><strong>Dati anagrafici</strong></h2>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome" required>
+            </div>
+            <div>
+                <label for="data_nascita">Data di nascita:</label>
+                <input type="date" id="data_nascita" name="data_nascita" required>
+            </div>
+            <div>
+                <label for="recapito">Numero di telefono:</label>
+                <input type="tel" id="recapito" name="recapito" required>
+            </div>
+        </section>
+        <section>
+            <h2><strong>Abbonamento</strong></h2>
+            <div>
+                <label for="abbonamento">Piano di abbonamento:</label>
+                <select id="abbonamento" name="abbonamento">
+                    <option value="free">Piano free</option>
+                    <option value="easy">Piano easy: €10/mese</option>
+                    <option value="medium">Piano medium: €17/mese</option>
+                    <option value="super">Piano super: €25/mese</option>
+                </select>
+            </div>
+            <div>
+                <legend>Aggiungere vantaggio PRO:</legend>
+                <label for="si_pro">
+                    <input type="radio" name="pro" value="si_pro" required>Si
+                </label>
+                <label for="no_pro">
+                    <input type="radio" name="pro" value="no_pro" required>No
+                </label>
+            </div>
+        </section>
+        <section>
+            <p><strong>Dati pagamento</strong></p>
+            <ul>
+                <li>
+                    <label for="numero_carta">Numero carta:</label>
+                    <input type="text" id="numero_carta" name="numero_carta" maxlength="12" minlength="12" required>
+                </li>
+                <li>
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc" name="cvc" maxlength="3" minlength="3" required>
+                </li>
+                <li>
+                    <label for="scadenza">Scadenza:</label>
+                    <input type="date" id="scadenza" name="scadenza" min="2022-02-01" required>
+                </li>
+            </ul>
+            <label for="indirizzi">Indirizzo di fatturazione:</label>
+            <input type="text" id="indirizzo" name="indirizzo" required>
+        </section>
+    </form>
+</body>
+</html>
