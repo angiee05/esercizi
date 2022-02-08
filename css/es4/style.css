@@ -1,0 +1,22 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background-color: rgb(68, 67, 67);
+}
+
+body>div{
+    background-color: rgb(68, 67, 67);
+    color: white;
+    text-align: end;
+}
+
+#più, #sette, #quattro, #uno, #zero{
+    grid-column: 1;
+    background-color: lightgrey;
+}
+
+#meno, #otto, #cinque, #due, #punto{
+    grid-column: 2;
+    background-color: lightgrey;
+}
