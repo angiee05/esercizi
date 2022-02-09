@@ -1,15 +1,20 @@
+.calc-cnt{
+    width: 170px;
+}
 main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    background-color: rgb(68, 67, 67);
+    /* gap: 2px;
+    background-color: rgb(68, 67, 67); */
 }
 
-body>div{
+.calc-cnt>div{
     background-color: rgb(68, 67, 67);
     color: white;
     text-align: end;
+    margin-bottom: 5px;
 }
+
 
 #più, #sette, #quattro, #uno, #zero{
     grid-column: 1;
@@ -19,4 +24,19 @@ body>div{
 #meno, #otto, #cinque, #due, #punto{
     grid-column: 2;
     background-color: lightgrey;
+}
+
+#per, #nove, #sei, #tre, #ac{
+    grid-column: 3;
+    background-color: lightgrey;
+}
+
+#diviso, #uguale{
+    grid-column: 4;
+    background-color: lightgrey;
+}
+
+#uguale{
+    background-color: rgb(235, 100, 100);
+    grid-row: 2/6;
 }
