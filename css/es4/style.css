@@ -4,6 +4,8 @@
 main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    /* align-items: center; */
+    text-align: center;
     /* gap: 2px;
     background-color: rgb(68, 67, 67); */
 }
@@ -12,9 +14,8 @@ main{
     background-color: rgb(68, 67, 67);
     color: white;
     text-align: end;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
-
 
 #più, #sette, #quattro, #uno, #zero{
     grid-column: 1;
