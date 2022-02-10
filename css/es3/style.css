@@ -3,7 +3,6 @@
 .sidenav{
   display: flex;
   flex-direction: column;
-  flex-flow: column;
   align-items: center;
   height: 100%;
   width: 200px;
@@ -11,15 +10,15 @@
   top: 0;
   left: 0;
   background-color: rgb(194, 160, 238);
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .link{
   display: flex;
   flex-direction: column;
-  flex-flow: column;
   align-items: center;
-  flex-grow: 0.8;
+  flex-grow: 1;
+  justify-self: flex-start;
 }
 
 a{
@@ -49,6 +48,5 @@ img{
 
 .avatar{
   display: flex;
-  flex-flow: bottom;
   max-width: 70px;
 }
