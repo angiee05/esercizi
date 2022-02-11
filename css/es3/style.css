@@ -48,5 +48,8 @@ img{
 
 .avatar{
   display: flex;
+  flex-direction: column;
+  font-family: 'Bebas Neue', cursive;
   max-width: 70px;
+  text-align: center;
 }
