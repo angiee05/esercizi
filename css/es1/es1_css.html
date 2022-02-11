@@ -9,10 +9,8 @@
 
         <style>
             :root {
-                --main-ball-width: 100px;
-                --main-ball-height: 100px;
+                --main-ball-dim: 100px;
                 --main-ball-color: #ff8800;
-                --main-ball-b-r: 50px;
             }
             body {
                 background-color: #011212;
@@ -20,10 +18,10 @@
 
 
             .ball {
-                width: var(--main-ball-width);
-                height: var(--main-ball-height);
+                width: var(--main-ball-dim);
+                height: var(--main-ball-dim);
                 background-color: var(--main-ball-color);
-                border-radius: var(--main-ball-b-r);
+                border-radius: calc(var(--main-ball-dim)/2) ;
             }
         </style>
     </head>
