@@ -40,3 +40,7 @@ body{
   #yellow ul li:first-child{
       flex-grow: 3;
   }
+
+  #red ul {
+    flex-direction: row-reverse;
+  }
