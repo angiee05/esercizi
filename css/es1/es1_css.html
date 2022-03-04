@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Lezione HTML</title>
+
+        <style>
+            :root {
+                --main-ball-dim: 100px;
+                --main-ball-color: #ff8800;
+            }
+            body {
+                background-color: #011212;
+            }
+
+
+            .ball {
+                width: var(--main-ball-dim);
+                height: var(--main-ball-dim);
+                background-color: var(--main-ball-color);
+                border-radius: calc(var(--main-ball-dim)/2) ;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="ball"></div>
+    </body>
+
+</html>
