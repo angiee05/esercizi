@@ -7,9 +7,7 @@ function calculateSalary(role) {
   let salary;
   if (role === 'ceo') {
     salary = role + ' => ' + 2200; 
-  }else if (role === 'manager') {
-    salary = role + ' => ' + 1800;
-  }else if (role === 'cto') {
+  }else if (role === 'manager' || role === 'cto') {
     salary = role + ' => ' + 1800;
   }else if (role === 'developer') {
     salary = role + ' => ' + 1500;
