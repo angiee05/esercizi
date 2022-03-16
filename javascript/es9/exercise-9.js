@@ -1,10 +1,10 @@
 function getKeys(obj) {
-  let keys = [];
-  let i = 0;
-  for (let key of Object.keys(obj)) {
-    keys[i] = key;
-    i++;
-  }
+  let keys = Object.keys(obj);
+  //let i = 0;
+  //for (let key of Object.keys(obj)) {
+    //keys = key;
+    //i++;
+  //}
   return keys;
 }
 
