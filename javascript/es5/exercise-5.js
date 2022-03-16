@@ -4,23 +4,17 @@
 // developer => 1500
 // default => 1000
 function calculateSalary(role) {
-  let salary;
   switch (role) {
     case 'ceo':
-      salary = role + ' => ' + 2200;
-      break;
+      return role + ' => ' + 2200;
     case 'manager':
     case 'cto':
-      salary = role + ' => ' + 1800;
-      break;
+      return role + ' => ' + 1800;
     case 'developer':
-      salary = role + ' => ' + 1500; 
-      break;
+      return role + ' => ' + 1500; 
     default:
-      salary = role + ' => ' + 1000;  
+      return role + ' => ' + 1000;  
   }
-
-  return salary;
 }
 
 const ceoSalary = calculateSalary('ceo');
