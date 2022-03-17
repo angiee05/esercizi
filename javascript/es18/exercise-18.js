@@ -1,13 +1,15 @@
 function memoize(fn) {
   let cache = {};
-  return function (number) {
-
-    if (fn (number) == cache) {
-      return number;
-    }else {
-      cache= number;
+  return (number) => {
+    if (number in cache) {
+      console.log("Fetchign from cache for " + number);
+      return cache[number];
     }
-  }
+    console.log("Calculating result for " + number);
+    const output = fn(number);
+    cache[number] = output;
+    return output;
+  };
 }
 
 function factorial(x) {
