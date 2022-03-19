@@ -5,9 +5,8 @@ const person = {
 }
 
 
-
-for (let [key, value] of Object.entries(person))  { 
-  console.log(key + ": " + value);
+for (let key of Object.keys(person))  { 
+  console.log(`${key}: ${person.key}`) ;
 }
 
 

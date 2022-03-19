@@ -1,9 +1,10 @@
 function uncompletedNotes(notes) {
-  for (let note of notes) {
-    if (!(note.todos.every(item => item.done === true))) {
-      return note;
-    }
-  }
+  //for (let note of notes) {
+  //  if (!(note.todos.every(item => item.done === true))) {
+  //    return note;
+  //  }
+  //}
+  return notes.filter(note => !(note.todos.every(item => item.done === true)))
 }
 
 const notes = [
