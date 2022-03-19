@@ -1,9 +1,7 @@
 function getKeys(obj) {
   let keys = [];
-  let i = 0;
-  for (let key of Object.keys(obj)) {
-    keys[i] = key;
-    i++;
+  for (let key in obj) {
+    keys.push(key);
   }
   return keys;
 }
