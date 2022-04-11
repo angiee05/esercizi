@@ -9,5 +9,5 @@ const person = {
 //const firstName = person.firstName;
 //const lastName = person.lastName;
 //const age = person.age;
-const [id, firstName, lastName, age] = Object.values(person)
+const {id, firstName, lastName, age} = person
 console.log(id, firstName, lastName, age);

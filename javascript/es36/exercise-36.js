@@ -1,7 +1,7 @@
 class Person {
   static fromObject(obj) {
-    const Person = Object.assign({}, obj);
-    return Person;
+    const person = new Person(obj.firstName, obj.lastName);
+    return person;
   }
   constructor(firstName, lastName) {
     this.firstName = firstName;
