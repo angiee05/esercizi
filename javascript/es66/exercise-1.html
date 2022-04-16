@@ -1,0 +1,24 @@
+<html>
+
+<body>
+  <div id="container">
+    <ul class="todo-list"></ul>
+  </div>
+</body>
+
+</html>
+
+<script>
+  let todos;
+
+  fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())
+    .then(data => todos = data)
+    .then(() => {
+      for (let i in todos) {
+        const newLiNode = document.createElement('li')
+        newLiNode.innerText = todos[i].title
+        document.querySelector('.todo-list').append(newLiNode)
+      }
+    })
+</script>
