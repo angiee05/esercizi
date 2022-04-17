@@ -1,0 +1,39 @@
+<html>
+
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>First Name:</label>
+        <input type="text" class="form-input" id="firstName" value="Mario" />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" class="form-input" id="lastName" value="Rossi" />
+      </div>
+      <div>
+        <label>Age:</label>
+        <input type="number" class="form-input" id="age" value="25" />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script>
+  class Person {
+    constructor(firstName, lastName, age) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+    }
+  }
+  let [firstName, lastName, age] = document.getElementsByClassName("form-input")
+  let person = new Person(firstName.value, lastName.value, age.value)
+  
+  const formAtt = document.getElementsByTagName("form")
+  let att = JSON.stringify(person)
+  
+  formAtt[0].setAttribute('data-person', att)
+</script>
