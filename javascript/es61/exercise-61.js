@@ -62,18 +62,6 @@ function fetchJobById(id) {
   });
 }
 
-getPerson()
-.then(function(id) {
-	var promiseList = [];
-	var job = fetchJobById(2);
-	var person = fetchPersonById(2);
-	promiseList.push(job);
-	promiseList.push(person);
-	return Promise.any(promiseList)
-	       .then(function(risultati) {
-				console.log(risultati[0]);
-				console.log(risultati[1]);
-		   });
-})
-.catch((er) => console.log(er));
-// core here
+let promises = [fetchJobById(2), fetchPersonById(2)]
+Promise.any(promises).then((value) => console.log(value))
+
