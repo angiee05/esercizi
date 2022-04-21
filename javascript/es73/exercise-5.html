@@ -11,13 +11,32 @@
 </html>
 
 <script>
-  let tr = document.createElement("tr")
-  let tbody = document.getElementById("person-table").firstElementChild
-  function addRow() {
-    let str = "<tr><td><label>First Name:</label><input type='text' class='form-input' id='firstName'/></td><td><label>Last Name:</label><input type='text' class='form-input' id='lastName'/></td><td><label>Age:</label><input type='text' class='form-input' id='age'/></td></tr>"
-    document.tr.innerHTML = str
-    document.tbody.append(tr)
-  }
+  const tbody = document.getElementById("person-table").firstElementChild
+  const tr = document.createElement("tr")
+  const column_1 = document.createElement("td")
+  const column_2 = document.createElement("td")
+  const column_3 = document.createElement("td")
+  const input_1 = document.createElement("input")
+  const input_2 = document.createElement("input")
+  const input_3 = document.createElement("input")
+  input_1.type = "text"
+  input_2.type = "text"
+  input_3.type = "text"
+  input_1.id = "firstName"
+  input_2.id = "lastName"
+  input_3.id = "age"
+  input_1.value = "firstName"
+  input_2.value = "lastName"
+  input_3.value = "age"
+  const addRow = (() => {
+    tbody.append(tr)
+    tr.appendChild(column_1)
+    tr.appendChild(column_2)
+    tr.appendChild(column_3)
+    column_1.append(input_1)
+    column_2.append(input_2)
+    column_3.append(input_3)
+  })
 
   document.getElementById("add-row").addEventListener("click", addRow);
 
