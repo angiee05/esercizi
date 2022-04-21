@@ -1,0 +1,55 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const form = document.getElementById("person-form")
+  const input_1 = document.createElement("input")
+  const input_2 = document.createElement("input")
+  const input_3 = document.createElement("input")
+  const label_1 = document.createElement("label")
+  const label_2 = document.createElement("label")
+  const label_3 = document.createElement("label")
+  input_1.type = "text"
+  input_2.type = "text"
+  input_3.type = "text"
+  input_1.id = "firstName"
+  input_2.id = "lastName"
+  input_3.id = "age"
+  label_1.innerText = "firstName"
+  label_2.innerText = "lastName"
+  label_3.innerText = "age"
+  class Person {
+    constructor(firstName, lastName, age) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+    }
+  }
+  
+  function initForm() {
+    form.append(label_1)
+    form.append(input_1)
+    form.append(label_2)
+    form.append(input_2)
+    form.append(label_3)
+    form.append(input_3)
+  }
+
+  function submitPersonForm() {
+    event.preventDefault()
+    let person = new Person(input_1.value, input_2.value, input_3.value)
+    console.log(person)
+  }
+
+  initForm()
+  document.querySelector('button[type="submit"]').addEventListener("click", submitPersonForm);
+  
+</script>
