@@ -9,17 +9,17 @@
 <script>
   let todos;
 
-  fetch('https://jsonplaceholder.typicode.com/todos/4')
-    .then(response => response.json())
-    .then(data => todos = data)
-    .then(() => {
-        const newH2Node = document.createElement('h2')
-        const newInputNode = document.createElement('<input type="checkbox">')
-        const newLabelNode = document.createElement('label checked')
-        newH2Node.innerText = todos.title
-        newLabelNode.innerText = todos.completed
-        document.getElementById("container").append(newH2Node)
-        document.getElementById("container").append(newInputNode)
-        document.getElementById("container").append(newLabelNode)      
-    })
+  const fetchTodo = async () => {
+    let response = await fetch('https://jsonplaceholder.typicode.com/todos/4')
+    let todos = await response.json()
+    const newH2Node = document.createElement("h2")
+    const newInputNode = document.createElement("input")
+    newInputNode.type = "checkbox"
+    newInputNode.checked = todos.completed
+    newH2Node.innerText = todos.title
+    document.getElementById("container").append(newH2Node)
+    document.getElementById("container").append(newInputNode)     
+  }  
+
+  fetchTodo()
 </script>
