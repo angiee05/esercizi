@@ -1,0 +1,31 @@
+<html>
+
+<body>
+  <div id="container">
+    <h2>Hero's List</h2>
+    <ul class="hero-list">
+      <li class="hero-list-item">Batman</li>
+      <li class="hero-list-item">Superman</li>
+      <li class="hero-list-item">Spiderman</li>
+      <li class="hero-list-item">Hulk</li>
+      <li class="hero-list-item">Wolverine</li>
+    </ul>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const list = document.querySelector('.hero-list');
+
+  function hoverElement(event) {
+    event.target.style.backgroundColor = "red";
+  }
+
+  function hoveroutElement(event) {
+    event.target.style.backgroundColor = "inherit";
+  }
+
+  list.addEventListener("mouseover", hoverElement);
+  list.addEventListener("mouseout", hoveroutElement);
+</script>
