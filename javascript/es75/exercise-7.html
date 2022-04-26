@@ -1,12 +1,14 @@
 <html>
-  <body>
-    <div id="container">
-      <h2>Person's Form</h2>
-      <form id="person-form">
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </body>
+
+<body>
+  <div id="container">
+    <h2>Person's Form</h2>
+    <form id="person-form">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script>
@@ -71,5 +73,11 @@
     form.addEventListener("submit", submitPersonForm);
   }
 
+  const event = new Event('build');
+
   window.addEventListener("DOMContentLoaded", initForm);
+  
+  document.getElementById("person-form").dispatchEvent(event);
+  
+  document.getElementById("person-form").addEventListener('build', console.log(`Person Form Loaded`), false);
 </script>
