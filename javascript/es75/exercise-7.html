@@ -72,12 +72,12 @@
 
     form.addEventListener("submit", submitPersonForm);
   }
-
-  const event = new Event('build');
-
+  
   window.addEventListener("DOMContentLoaded", initForm);
   
-  document.getElementById("person-form").dispatchEvent(event);
+  const customEvent = new Event('personFormLoaded');
+
+  document.getElementById("person-form").dispatchEvent(customEvent);
   
-  document.getElementById("person-form").addEventListener('build', console.log(`Person Form Loaded`), false);
+  document.getElementById("person-form").addEventListener('personFormLoaded', console.log("Person Form Loaded"));
 </script>
